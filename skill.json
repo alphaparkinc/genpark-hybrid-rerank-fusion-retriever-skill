@@ -1,0 +1,39 @@
+{
+  "name": "genpark-hybrid-rerank-fusion-retriever-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Hybrid search reranking engine fusing dense semantic embeddings and sparse lexical BM25 rankings via Reciprocal Rank Fusion (RRF).",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "alphaparkinc",
+  "category": "hybrid-search",
+  "tags": [
+    "hybrid-search",
+    "reranking",
+    "reciprocal-rank-fusion",
+    "bm25",
+    "vector-search"
+  ],
+  "inputs": {
+    "query": {
+      "type": "string"
+    },
+    "dense_results": {
+      "type": "array"
+    },
+    "sparse_results": {
+      "type": "array"
+    }
+  },
+  "outputs": {
+    "top_doc_id": {
+      "type": "string"
+    },
+    "top_title": {
+      "type": "string"
+    },
+    "ranked_documents": {
+      "type": "array"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
